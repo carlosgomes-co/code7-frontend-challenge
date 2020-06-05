@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#000000">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Carlos Eduardo Gomes <carlitoshxcx@gmail.com>">
+
+  <title>Zima Grid</title>
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <style>
+    html {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    html * {
+      box-sizing: border-box;
+      --margin-width: 80px;
+      --margin-width-half: 40px;
+    }
+
+    html body {
+      margin: 0;
+      background-image: url("background-body.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: #0f0000f2;
+      background-blend-mode: color-dodge;
+      background-size: cover;
+      font-family: 'Poiret One', cursive;
+    }
+
+    html body main {
+      display: grid;
+      grid-template-columns: 50vw;
+      grid-template-rows: 100vh;
+      grid-auto-flow: column;
+    }
+
+    html body main section {
+      padding: var(--margin-width) var(--margin-width-half);
+    }
+
+    html body main section:first-child {
+      padding-left: var(--margin-width);
+    }
+
+    html body main section:last-child {
+      padding-right: var(--margin-width);
+      display: flex;
+      flex-flow: column;
+    }
+
+    html body main section .item {
+      width: 100%;
+    }
+
+    html body main section .item p {
+      margin: 40px;
+      font-size: 3vw;
+      color: #fff48f80;
+      overflow: hidden;
+      max-height: 100%;
+    }
+
+    html body main section:first-child .item {
+      background-color: #10ccf9;
+      height: 100%;
+    }
+
+    html body main section:last-child .item {
+      height: 50%;
+    }
+
+    html body main section:last-child .item:first-child {
+      background: linear-gradient(90deg, #ddb88d, #ae3034, #311c2d);
+      margin-bottom: var(--margin-width-half);
+    }
+
+    html body main section:last-child .item:last-child {
+      background-image: url("background-item.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-blend-mode: color-burn;
+      background-color: #5326d9cc;
+      background-size: cover;
+      margin-top: var(--margin-width-half);
+    }
+  </style>
+  <base href="/">
+</head>
+
+<body>
+  <main>
+    <section>
+      <div class="item"></div>
+    </section>
+    <section>
+      <div class="item"></div>
+      <div class="item">
+        <p>SOMETIMES, IT IS DIFFICULT EVEN FOR ME TO UNDERSTAND WHAT I
+          HAVE BECOME, AND HARDER STILL TO REMEMBER WHAT I ONCE WAS.</p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
