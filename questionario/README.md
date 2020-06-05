@@ -81,7 +81,7 @@ Assinale a opção que representa a tag HTML 5 responsável por reproduzir  arqu
 - [ ] `<img>`
 - [ ] `<sound>`
 - [ ] `<music>`
-- [x] **`<audio>`** 
+- [x] `<audio>` 
 
 ---
 
