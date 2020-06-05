@@ -46,7 +46,7 @@ Em determinada rua, há 5 residências que estão numeradas em forma de progress
 Se 1=6, 2=26, 3=326, 4=4.326.
  Qual será o valor correspondente ao 5?
 
-###5=54.326
+### 5=54.326
 
 
 ---
