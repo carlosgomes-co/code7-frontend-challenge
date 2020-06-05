@@ -12,7 +12,7 @@ Seu trabalho é realizar um protótipo de baixa fidelidade (wireframe) dessa nov
 ### Wireframe desenvolvido:
 
 ##### Figma: 
-![filmes-ui.fig](filmes-ui.fig)
+[filmes-ui.fig]
 
 
 #### Preview
