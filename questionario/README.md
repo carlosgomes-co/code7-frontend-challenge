@@ -10,7 +10,7 @@ Nenhum corpo que não seja sólido é cristal. Conclui-se logicamente que:
 
 - [ ] Algum cristal não é corpo sólido
 - [ ] Todo corpo sólido é cristal
-- [x] Todo cristal é corpo sólido
+- [x] **Todo cristal é corpo sólido**
 - [ ] Nenhum corpo sólido é cristal
 - [ ] Nenhum cristal é corpo sólido
 
@@ -25,7 +25,7 @@ A soma de dois números é 16 e a diferença dos seus quadrados é 128. O produt
 - [ ] –12
 - [ ] 12
 - [ ] 36
-- [x] 48
+- [x] **48**
 
 
 ---
@@ -37,7 +37,7 @@ Em determinada rua, há 5 residências que estão numeradas em forma de progress
 - [ ] A numeração da terceira casa é 21.
 - [ ] A numeração da quarta casa é 30.
 - [ ] Somando-se a numeração da primeira e da terceira casa, o resultado é o número da quarta casa.
-- [x] O resultado da soma da numeração da terceira e da quarta casa é igual a 240.
+- [x] **O resultado da soma da numeração da terceira e da quarta casa é igual a 240.**
 - [ ] O resultado da soma da numeração das cinco casas é igual a 1.025.
 
 
@@ -69,7 +69,7 @@ Considerando o código JavaScript abaixo assinale a alternativa correta:
 ```
 
 - [ ] Trinta é 2010 e não 4010. Tamanho: 3
-- [x] Trinta é 30 e não 50. Tamanho: 3
+- [x] **Trinta é 30 e não 50. Tamanho: 3**
 - [ ] Trinta é 2010 e não 40 10. Tamanho: undefined
 - [ ] Trinta é 30 e não 50. Tamanho: undefined 
 
@@ -81,7 +81,7 @@ Assinale a opção que representa a tag HTML 5 responsável por reproduzir  arqu
 - [ ] `<img>`
 - [ ] `<sound>`
 - [ ] `<music>`
-- [x] `<audio>` 
+- [x] **`<audio>`** 
 
 ---
 
@@ -89,7 +89,7 @@ No desenvolvimento web, SASS é um(a):
 
 - [ ] framework para desenvolvimento em JavaScript, compatível com Angular.
 - [ ] framework para desenvolvimento em Ruby
-- [x] extensão do CSS que permite o desenvolvimento de regras, variáveis e mixins.
+- [x] **extensão do CSS que permite o desenvolvimento de regras, variáveis e mixins.**
 - [ ] modelo de arquitetura do Ruby on Rails
 - [ ] framework para desenvolvimento JSP 
 
@@ -104,7 +104,7 @@ var b = (temp === ind);
 ```
 
 - [ ] true
-- [x] false
+- [x] **false**
 - [ ] null
 - [ ] undefined
 - [ ] 0
@@ -120,7 +120,7 @@ Considerando o framewok JavaScript Angular em sua versão 2 ou superior, assinal
 
 - [ ] A diretiva ng-if é responsável por realizar comparações booleanas entre variáveis.
 
-- [x] O termo @Component representa a definição de métodos da camada de controle do Angular.
+- [x] **O termo @Component representa a definição de métodos da camada de controle do Angular.**
 
 - [ ] Por padrão, todos os arquivos de componentes Angular estão formatados na sintaxe JavaScript.
 
@@ -133,4 +133,4 @@ O método ngOnInit implementado pela interface OnInit em componentes do framewor
 - [ ] Executar comandos ao carregar a página do componente.
 - [ ] Executar comandos ao destruir o componente.
 - [ ] Executar comandos em qualquer lugar do componente.
-- [x] Executar comandos no início do ciclo de vida do componente.
+- [x] **Executar comandos no início do ciclo de vida do componente.**
