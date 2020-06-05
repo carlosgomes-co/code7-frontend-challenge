@@ -12,7 +12,10 @@ Seu trabalho é realizar um protótipo de baixa fidelidade (wireframe) dessa nov
 ### Wireframe desenvolvido:
 
 ##### Figma: 
-[filmes-ui.fig]
+Online: [figma.com/uWD7SRRqOBhucUQ1zcrjOq](https://www.figma.com/proto/uWD7SRRqOBhucUQ1zcrjOq/filmes-ui?node-id=5%3A838&viewport=218%2C196%2C1.0557469129562378&scaling=min-zoom)
+
+Arquivo: [filmes-ui.fig](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/filmes-ui/filmes-ui.fig)
+
 
 
 #### Preview
