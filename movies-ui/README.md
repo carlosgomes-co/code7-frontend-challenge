@@ -1,7 +1,6 @@
 # Code7
-``frontend challenge``
+``frontend challenge`` [ - Menu](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/)
 
-[Menu](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/)
 
 ---
 
