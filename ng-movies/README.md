@@ -1,32 +1,37 @@
 # Code7
 ``frontend challenge`` [ - Menu](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/)
 
+
 ---
 
-# Ng Movies
+### Ng Movies
+
+#### I didn't receive the file `FILMES.json`, so then I work with IMDB.
+
+1. Add these [bookmarklet](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/ng-movies/bookmarklet/copy-top-rated-movies-on-imdb.js) to bookmarks with this name: `Get Movies IDs`.
+
+	```
+	javascript: (function () { 
+		moviesId = []; 
+		document.querySelectorAll('#main > div > span > div > div > div.lister > table > tbody')[0].children.forEach(td => { 
+			moviesId.push(td.children[1].children[0].href.split('/')[4]);
+		});
+		alert("Go to window console and type: copy(moviesId)"); 
+	})();
+	```
+
+2. Access [IMDB Top Movies](https://www.imdb.com/chart/top/) and click on `Get Movies IDs` bookmark to get movies list.
+
+3. Access browser console and type: `copy(moviesId)`.
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
-## Development server
+#### Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
+#### Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
