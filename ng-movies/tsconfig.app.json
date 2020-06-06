@@ -26,7 +26,7 @@
         "src/app/movies/*"
       ],
       "@data/*": [
-        "src/assets/data/*"
+        "src/data/*"
       ],
     }
   },
