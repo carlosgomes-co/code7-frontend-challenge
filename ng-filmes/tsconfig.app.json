@@ -22,8 +22,8 @@
       "dom"
     ],
     "paths": {
-      "@filmes/*": [
-        "src/app/filmes/*"
+      "@movies/*": [
+        "src/app/movies/*"
       ],
       "@data/*": [
         "src/assets/data/*"
