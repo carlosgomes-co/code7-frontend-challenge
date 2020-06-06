@@ -1,0 +1,15 @@
+<article>
+  <div>
+    <picture>
+      <img [src]="data?.poster" [title]="data?.name" [alt]="data?.name">
+    </picture>
+    <h2>{{data?.name}} <small>({{data?.year}})</small></h2>
+  </div>
+  <aside>
+    <h3><small>Rating: </small>{{data?.rating}}</h3>
+    <details>
+      <h4><small>Director: </small>{{data?.director}}</h4>
+      <p><small>Description: </small><summary>{{data?.description}}</summary></p>
+    </details>
+  </aside>
+</article>

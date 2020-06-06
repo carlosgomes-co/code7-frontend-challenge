@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
+import { Movie } from '@movies/types';
 import { StorageService } from '@movies/storage.service';
 
 @Component({
@@ -13,7 +14,7 @@ export class MoviesComponent implements OnInit, OnDestroy {
   private moviesLoaded$: Subscription;
 
   /* Movies Array */
-  public movies: any[];
+  public movies: Movie[];
 
   /* Loading movies? */
   public loading = true;
@@ -21,16 +22,15 @@ export class MoviesComponent implements OnInit, OnDestroy {
   constructor(private storageService: StorageService) { }
 
   ngOnInit(): void {
-    if (this.storageService.hasMovies) {
-      this.movies = this.storageService.movies;
+    if (this.storageService.hasData) {
+      this.movies = this.storageService.data;
       this.loading = false;
     } else {
-      this.moviesLoaded$ = this.storageService.loaded.subscribe(data => {
+      this.moviesLoaded$ = this.storageService.loaded.subscribe((data: Movie[]) => {
         this.movies = data;
         this.loading = false;
       });
     }
-    console.log('this.movies', this.movies);
   }
 
   ngOnDestroy() {
