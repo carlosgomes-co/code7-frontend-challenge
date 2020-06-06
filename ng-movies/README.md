@@ -8,6 +8,8 @@
 
 1. Add these file content [bookmarklet/copy-top-rated-movies-on-imdb.js](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/ng-movies/bookmarklet/copy-top-rated-movies-on-imdb.js) to bookmarks with this name: `Get Movies IDs`.
 
+	`File copy-top-rated-movies-on-imdb.js content:`
+	
 	```
 	javascript: (function () { 
 		moviesId = []; 
