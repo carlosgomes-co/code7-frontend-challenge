@@ -27,7 +27,7 @@
 
 3. Access browser console and type: `copy(moviesId)`.
 
-#### Now you have the `IMDB Top 250 movies id list :tada:`, let's make this available to our Angular app.
+#### Now you have the `IMDB Top 250 movies id list`:tada:, let's make this available to our Angular app.
 
 1. Open file [src/data/movies.js](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/ng-movies/src/data/movies.js)
 
