@@ -4,8 +4,6 @@
 
 ---
 
-### Ng Movies
-
 #### I didn't receive the file `FILMES.json`, so then I work with IMDB.
 
 1. Add these [bookmarklet](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/ng-movies/bookmarklet/copy-top-rated-movies-on-imdb.js) to bookmarks with this name: `Get Movies IDs`.
@@ -23,6 +21,12 @@
 2. Access [IMDB Top Movies](https://www.imdb.com/chart/top/) and click on `Get Movies IDs` bookmark to get movies list.
 
 3. Access browser console and type: `copy(moviesId)`.
+
+
+---
+
+
+### Ng Movies
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
