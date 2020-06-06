@@ -13,9 +13,12 @@
 	```
 	javascript: (function () { 
 		moviesId = []; 
-		document.querySelectorAll('#main > div > span > div > div > div.lister > table > tbody')[0].children.forEach(td => { 
-			moviesId.push(td.children[1].children[0].href.split('/')[4]);
-		});
+		document
+			.querySelectorAll('#main > div > span > div > div > div.lister > table > tbody')[0]
+			.children
+			.forEach(td => { 
+				moviesId.push(td.children[1].children[0].href.split('/')[4]);
+			});
 		alert("Go to window console and type: copy(moviesId)"); 
 	})();
 	```
