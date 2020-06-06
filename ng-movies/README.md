@@ -38,6 +38,22 @@
 
 ---
 
+### Preview
+
+Data displayed for every movie:
+
+- name
+- year
+- director
+- rating (**Instead of Gender :sweat_smile:**)
+- description
+- poster
+
+![preview](preview.png)
+
+
+---
+
 
 ### Ng Movies
 
