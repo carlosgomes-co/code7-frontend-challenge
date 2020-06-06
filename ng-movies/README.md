@@ -34,7 +34,7 @@
 	}
 	```
 	
-3. Run the project! ::fire::
+3. Run the project! :fire:
 
 ---
 
