@@ -4,7 +4,7 @@
 
 ---
 
-#### I didn't receive the file `FILMES.json`, so then I work with IMDB.
+#### I didn't receive the file `FILMES.json`, so then I worked with IMDB.
 
 1. Add these [bookmarklet](https://github.com/carlitoshxcx/code7-frontend-challenge/tree/master/ng-movies/bookmarklet/copy-top-rated-movies-on-imdb.js) to bookmarks with this name: `Get Movies IDs`.
 
