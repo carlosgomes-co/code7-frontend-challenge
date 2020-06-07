@@ -54,6 +54,10 @@ Data displayed for every movie:
 - description
 - poster
 
+The app will shown 10 random results from movies id list
+
+*This is because the API for getting movies info only allow 10 requests by day*
+
 ![preview](preview.png)
 
 

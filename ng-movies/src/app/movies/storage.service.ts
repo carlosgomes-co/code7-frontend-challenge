@@ -10,7 +10,10 @@ import { Movie } from '@movies/types';
 })
 export class StorageService {
   /* Movies data */
-  public data: Movie[];
+  public data: Movie[] = [];
+
+  /* Quantity of movies to load */
+  public loadQuantity = 10;
 
   /* Movies loaded */
   public loaded = new Subject<any>();
@@ -26,7 +29,7 @@ export class StorageService {
         this.hasData = true;
         this.loaded.next(this.data);
       } else {
-        this.load(2).then(dataLoaded => this.save(dataLoaded));
+        this.load(this.loadQuantity);
       }
     });
   }
@@ -45,19 +48,36 @@ export class StorageService {
   /**
    * Load Sorted Movies data
    */
-  private async load(quantity: number): Promise<any> {
+  private load(quantity: number): void {
     const selectedMovies = [];
     while (quantity > 0) {
       const selected = this.getRandomInt(0, movies.length - 1);
       const alreadySelected = selectedMovies.indexOf(movies[selected]) >= 0;
       if (!alreadySelected) {
         selectedMovies.push(movies[selected]);
-        quantity --;
+        quantity--;
       }
     }
     const url = 'https://json.smappi.org/adw0rd/imdb-movie/movie?id=';
-    const movieData = selectedMovies.map(id => this.httpClient.get<any>(`${url}${id}`).toPromise());
-    return Promise.all(movieData);
+
+    selectedMovies.map(id => {
+      this.httpClient.get<any>(`${url}${id}`).subscribe((info: Movie) => this.save(info));
+    });
+  }
+
+  /**
+   * Save movies on localStorage
+   * @param data any[]
+   * @returns Promise
+   */
+  private async save(data: Movie): Promise<any> {
+    return new Promise((resolve) => {
+      this.data.push(data);
+      this.hasData = true;
+      this.saveLocal('movies', this.data);
+      this.loaded.next(this.data);
+      resolve();
+    });
   }
 
   /**
@@ -83,31 +103,6 @@ export class StorageService {
       } else {
         resolve(false);
       }
-    });
-  }
-
-  /**
-   * Return Movies
-   * @returns Promise
-   */
-  public async get(): Promise<any> {
-    return new Promise((resolve) => {
-      resolve(this.data);
-    });
-  }
-
-  /**
-   * Save movies on localStorage
-   * @param data any[]
-   * @returns Promise
-   */
-  public async save(data: Movie[]): Promise<any> {
-    return new Promise((resolve) => {
-      this.data = data;
-      this.hasData = true;
-      this.saveLocal('movies', data);
-      this.loaded.next(this.data);
-      resolve();
     });
   }
 }
