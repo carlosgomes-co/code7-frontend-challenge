@@ -1,0 +1,102 @@
+/* Theme colors */
+$background: #f8f9fd;
+$primary: #873deb;
+$white: #ffffff;
+$accent: #28cc9b;
+$grey-1: #363840;
+$grey-2: #4c5164;
+$grey-3: #808080;
+$grey-4: #81879c;
+$grey-5: #7b7e8c;
+$grey-6: #e6e8f0;
+$grey-7: #f8f9fd;
+$grey-8: #f9f9f9;
+$grey-9: #d3d5e0;
+$grey-10: #fcfcfe;
+
+$colors: (
+  'background': $background,
+  'primary': $primary,
+  'white': $white,
+  'accent': $accent,
+  'grey-1': $grey-1,
+  'grey-2': $grey-2,
+  'grey-3': $grey-3,
+  'grey-4': $grey-4,
+  'grey-5': $grey-5,
+  'grey-6': $grey-6,
+  'grey-7': $grey-7,
+  'grey-8': $grey-8,
+  'grey-9': $grey-9,
+  'grey-10': $grey-10
+);
+
+/* Font config */
+$font_primary: 'Lexend+Tera';
+$font_secondary: 'Oswald';
+$font_accent: 'Meddon';
+
+/* Font sizes */
+$font_sizes: (
+  1: 18px,
+  2: 15px,
+  3: 14px,
+  4: 12px,
+  5: 10px,
+  6: 9px
+);
+
+/* Font weight */
+$light: 100;
+$regular: 200;
+$medium: 300;
+$bold: 400;
+$extrabold: 500;
+$black: 600;
+
+$font_weights: (
+  'light': $light,
+  'regular': $regular,
+  'medium': $medium,
+  'bold': $bold,
+  'extrabold': $extrabold,
+  'black': $black
+);
+
+/* Build */
+html {
+  /* Colors */
+  @each $name, $color in $colors {
+    /* make colors accessible via: var(--color-name) */
+    --#{$name}: #{$color};
+
+    /* class */
+    .#{$name} {
+      color: #{$color};
+    }
+
+    /* background */
+    .bg-#{$name} {
+      background-color: #{$color};
+    }
+  }
+
+  /* Fonts */
+  @each $number, $font_size in $font_sizes {
+    /* make font_sizes accessible via: var(--fs-number) */
+    --fs-#{$number}: #{$font_size};
+
+    /* class */
+    .fs-#{$number} {
+      font-size: $font_size;
+    }
+  }
+
+  /* Fonts weight */
+  @each $name, $font_weight in $font_weights {
+    /* class */
+    .#{$name} {
+      font-weight: $font_weight;
+    }
+  }
+}

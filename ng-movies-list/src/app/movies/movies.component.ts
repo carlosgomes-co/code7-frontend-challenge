@@ -2,7 +2,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { Movie } from '@movies/types';
+import { DustConfig } from '@movies/dust-config';
 import { StorageService } from '@movies/storage.service';
+
+declare let particlesJS: any; // Required to be properly interpreted by TypeScript.
 
 @Component({
   selector: 'app-movies',
@@ -31,10 +34,17 @@ export class MoviesComponent implements OnInit, OnDestroy {
         this.loading = false;
       });
     }
+
+    this.initDust();
   }
 
   ngOnDestroy() {
     if (this.moviesLoaded$) { this.moviesLoaded$.unsubscribe(); }
   }
 
+  public initDust(): void {
+    particlesJS('dust', DustConfig, () => {
+      console.log(DustConfig);
+    });
+  }
 }

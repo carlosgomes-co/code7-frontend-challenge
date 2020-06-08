@@ -1,6 +1,11 @@
-<h1>Top Rated Movies</h1>
-<ol>
+<div class="author">
+  <p>@carlitoshxcx<span>presents</span></p>
+  <h1>10 Top Rated Movies</h1>
+</div>
+<ol class="content">
   <li *ngFor="let movie of movies">
     <app-movie [data]="movie"></app-movie>
   </li>
 </ol>
+<div id="dust" class="dust"></div>
+<div class="background"></div>

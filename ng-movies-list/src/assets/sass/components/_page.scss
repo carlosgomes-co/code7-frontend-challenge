@@ -1,0 +1,202 @@
+body {
+  background-color: $background;
+
+  * {
+    @include box-sizing();
+  }
+}
+
+.page {
+  @include transition(all 0.5s ease-in-out);
+  padding-left: 0px;
+  padding-right: 0px;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.ease-out {
+  @include transition(all 0.3s ease-out);
+}
+
+
+
+// font-family: 'Lexend Tera', sans-serif;
+// font-family: 'Meddon', cursive;
+// font-family: 'Oswald', sans-serif;
+
+html {
+  margin: 0;
+
+  --text-size: 50px;
+  --text-color: #ca0707;
+  --text-inner-color: #ece92d;
+  --text-border-color: #fedb5b;
+  --text-border-shadow-color: #fe950e;
+  --text-shadow-distance-x: 10px;
+  --text-shadow-distance-y: 50px;
+  --text-shadow-opacity: 15px;
+  --text-shadow-color: #0000008a;
+
+  .shining {
+    --text-size: 54px;
+    --text-color: #fd1c1c;
+    --text-inner-color: #ffffff;
+    --text-border-color: #f9df7f;
+    --text-border-shadow-color: #eb8703;
+    --text-shadow-distance-x: 8px;
+    --text-shadow-distance-y: 40px;
+    --text-shadow-opacity: 25px;
+    --text-shadow-color: #0000008a;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100vw;
+    height: 100%;
+    margin: 0;
+    background-image: url("assets/img/background-body.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-color: #6e00ff33;
+    background-blend-mode: difference;
+    background-size: cover;
+
+    // width: 50%;
+    // margin: 20% auto;
+    // // padding: 0;
+    // // border: 2px solid #e57676;
+    // // background-color: #d84a4a;
+    // // box-shadow: 0px 10px 40px 0px rgb(0, 0, 0);
+    // display: block;
+    main {
+      // margin: 4px;
+      // padding: 0;
+      // background-color: #aa1717;
+      // border: 2px solid #e57676;
+      // box-shadow: inset 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+
+      section {
+        // margin: 8px;
+        // border: 10px solid #e8facc;
+        // border-style: dotted;
+        // display: block;
+
+        app-movies {
+          // margin: 8px;
+          // border: 2px solid #e57676;
+          // background-color: #d84a4a;
+          // box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+          // display: block;
+          .author {
+            position: absolute;
+            z-index: 3;
+
+            h1 {
+              @include transition(all 0.2s ease);
+              font-family: "CoreCircus", sans-serif;
+              text-transform: uppercase;
+              font-size: var(--text-size);
+              text-align: center;
+              line-height: 1;
+              font-weight: normal;
+              margin: 0;
+              top: 20%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              position: absolute;
+              color: var(--text-color);
+              // letter-spacing: -0.8rem;
+              text-shadow: -1px -1px 0 var(--text-border-color), 1px -1px 0 var(--text-border-color),
+                -1px 1px 0 var(--text-border-color), 1px 1px 0 var(--text-border-color),
+                1px 0px 0px var(--text-border-shadow-color), 0px 1px 0px var(--text-border-shadow-color),
+                2px 1px 0px var(--text-border-shadow-color), 1px 2px 0px var(--text-border-shadow-color),
+                3px 2px 0px var(--text-border-shadow-color), 2px 3px 0px var(--text-border-shadow-color),
+                4px 3px 0px var(--text-border-shadow-color), 3px 4px 0px var(--text-border-shadow-color),
+                5px 4px 0px var(--text-border-shadow-color), 4px 5px 0px var(--text-border-shadow-color),
+                6px 5px 0px var(--text-border-shadow-color), 5px 6px 0px var(--text-border-shadow-color),
+                7px 6px 0px var(--text-border-shadow-color), 1px -1px 30px var(--text-border-color), var(--text-shadow-distance-x) var(--text-shadow-distance-y) var(--text-shadow-opacity) var(--text-shadow-color);
+              opacity: 0.8;
+              width: 50vw;
+              cursor: pointer;
+  
+              &:hover {
+                @extend .shining;
+              }
+  
+              &:before {
+                content: "10 Top Rated Movies";
+                position: absolute;
+                // left: 0;
+                color: var(--text-inner-color);
+                font-family: "CoreCircus2DDot1";
+                text-shadow: none;
+                transform: translate(1px, 1px);
+              }
+            }
+          }
+
+          .content {
+            position: absolute;
+            z-index: 2;
+            // margin: 4px;
+            // background-color: #aa1717;
+            // border: 2px solid #e57676;
+            // background-color: #fdf1d6;
+            // box-shadow: inset 0em 0em 40px #00000080;
+            // max-height: 60vh;
+            // overflow: scroll;
+
+            li {
+              app-movie {
+                // color: white;
+              }
+            }
+          }
+
+          .background {
+            width: 600px;
+            height: 600px;
+            background-image: url("assets/img/background-movie-info.svg");
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-position: center center;
+            background-size: contain;
+            opacity: 0.6;
+            display: block;
+            position: absolute;
+            top: 25%;
+            z-index: 0;
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+
+  canvas {
+    display: block;
+  }
+
+  /* ---- dust container ---- */
+  #dust {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+  }
+}
