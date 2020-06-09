@@ -1,0 +1,64 @@
+.text-shadow-3d {
+  text-shadow: -1px -1px 0 var(--text-border-color), 1px -1px 0 var(--text-border-color),
+    -1px 1px 0 var(--text-border-color), 1px 1px 0 var(--text-border-color), 1px 0px 0px var(--text-border-shadow-color),
+    0px 1px 0px var(--text-border-shadow-color), 2px 1px 0px var(--text-border-shadow-color),
+    1px 2px 0px var(--text-border-shadow-color), 3px 2px 0px var(--text-border-shadow-color),
+    2px 3px 0px var(--text-border-shadow-color), 4px 3px 0px var(--text-border-shadow-color),
+    3px 4px 0px var(--text-border-shadow-color), 5px 4px 0px var(--text-border-shadow-color),
+    4px 5px 0px var(--text-border-shadow-color), 6px 5px 0px var(--text-border-shadow-color),
+    5px 6px 0px var(--text-border-shadow-color), 7px 6px 0px var(--text-border-shadow-color),
+    1px -1px 30px var(--text-border-color),
+    var(--text-shadow-distance-x) var(--text-shadow-distance-y) var(--text-shadow-opacity) var(--text-shadow-color);
+}
+
+.text-inner-dots {
+  @keyframes turn_lights_on {
+    0% {
+      --text-inner-color: #ffffff;
+      --text-color: #fd1c1c;
+    }
+    100% {
+      --text-inner-color: #ffb423;
+      --text-color: #ca0707;
+    }
+  }
+
+  &:hover {
+    animation: turn_lights_on 1s ease-in-out infinite;
+  }
+
+  &:before {
+    content: "10 Top Rated Movies";
+    font-family: "CoreCircus2DDot1";
+    color: var(--text-inner-color);
+    text-shadow: none;
+    transform: translate(1.5px, 0.5px);
+    position: absolute;
+  }
+}
+
+.blinking-title {
+  @extend .text-shadow-3d;
+  @extend .text-inner-dots;
+  @include transition(all 0.2s ease);
+
+  width: 100vw;
+  margin: 0;
+  font-family: "CoreCircus", sans-serif;
+  font-size: var(--text-size);
+  font-weight: normal;
+  color: var(--text-color);
+  cursor: pointer;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+
+  &:hover {
+    @extend .shining;
+  }
+}

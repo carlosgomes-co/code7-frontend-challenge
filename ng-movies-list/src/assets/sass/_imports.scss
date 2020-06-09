@@ -15,6 +15,10 @@
 
 /* Core */
 @import "core/reset";
+@import "core/helpers";
 
 /* Components */
+@import "components/blinking-title";
+@import "components/movie";
+@import "components/movies";
 @import "components/page";

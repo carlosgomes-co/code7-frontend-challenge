@@ -42,9 +42,10 @@ export class MoviesComponent implements OnInit, OnDestroy {
     if (this.moviesLoaded$) { this.moviesLoaded$.unsubscribe(); }
   }
 
-  public initDust(): void {
-    particlesJS('dust', DustConfig, () => {
-      console.log(DustConfig);
-    });
+  /**
+   * Add dust to page
+   */
+  private initDust(): void {
+    particlesJS('dust', DustConfig);
   }
 }

@@ -1,102 +1,60 @@
 export const DustConfig = {
   particles: {
     number: {
-      value: 150,
+      value: 100,
       density: {
         enable: true,
-        value_area: 789.1476416322727
+        value_area: 500
       }
     },
-
     color: { value: '#ffffff' },
-
     shape: {
       type: 'circle',
       stroke: {
         width: 0,
         color: '#000000'
       },
-
-      polygon: { nb_sides: 5 }
+      polygon: { nb_sides: 1 }
     },
-
     opacity: {
       value: 0.48927153781200905,
       random: false,
       anim: {
         enable: true,
-        speed: 0.9,
+        speed: 2,
         opacity_min: 0,
         sync: false
       }
     },
-
     size: {
-      value: 2,
+      value: 1.5,
       random: true,
       anim: {
         enable: true,
-        speed: 2,
+        speed: 1,
         size_min: 0,
         sync: false
       }
     },
-
-    line_linked: {
-      enable: false,
-      distance: 150,
-      color: '#ffffff',
-      opacity: 0.4,
-      width: 1
-    },
-
+    line_linked: { enable: false },
     move: {
       enable: true,
-      speed: 0.7,
+      speed: 1,
       direction: 'none',
       random: true,
       straight: false,
       out_mode: 'out',
       bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200
-      }
+      attract: { enable: false }
     }
   },
-
   interactivity: {
     detect_on: 'canvas',
     events: {
       onhover: { enable: false },
       onclick: { enable: false },
       resize: false
-    },
-
-    modes: {
-      grab: {
-        distance: 400,
-        line_linked: { opacity: 1 }
-      },
-
-      bubble: {
-        distance: 83.91608391608392,
-        size: 1,
-        duration: 3,
-        opacity: 1,
-        speed: 3
-      },
-
-      repulse: {
-        distance: 200,
-        duration: 0.4
-      },
-
-      push: { particles_nb: 4 },
-      remove: { particles_nb: 2 }
     }
   },
-
   retina_detect: true
 };

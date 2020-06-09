@@ -1,0 +1,12 @@
+.ease-out {
+  @include transition(all 0.3s ease-out);
+}
+
+.full-width {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.margin-zero {
+  margin: 0;
+}

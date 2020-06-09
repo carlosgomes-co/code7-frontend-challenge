@@ -1,0 +1,100 @@
+app-movie {
+  @extend .full-width;
+
+  article {
+    // margin: 0 5vw;
+
+    > div {
+      position: absolute;
+      z-index: 4;
+
+      picture {
+        img {
+          @include border-radius(3px);
+          width: 15vw;
+          margin-top: 2vh;
+          margin-left: 20vw;
+          box-shadow: 0px 30px 30px #0000007d;
+        }
+      }
+      h2 {
+        width: 17vw;
+        margin-top: 4vh;
+        margin-left: 1vw;
+        font-family: "Oswald", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        color: #efca0c;
+        text-transform: uppercase;
+        float: right;
+        text-shadow: 0px 20px 20px #000000c7;
+
+        small {
+          font-size: 14px;
+          font-weight: 600;
+          color: #19005d;
+        }
+      }
+    }
+
+    aside {
+      position: absolute;
+      z-index: 4;
+      cursor: default;
+
+      h3 {
+        width: 170px;
+        margin: 0px 22px;
+        font-family: "Oswald", sans-serif;
+        font-size: 80px;
+        line-height: 45px;
+        color: #efb240;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        top: 8vh;
+        border: 1px solid #9100ff85;
+        border-radius: 100px;
+        height: 170px;
+        text-shadow: -5px 8px 1px #00000033, -5px 20px 25px #8008ffd6;
+        box-shadow: 0 0 15px #ff8b00c7;
+
+        small {
+          font-family: "Lexend Tera", sans-serif;
+          font-size: 12px;
+          line-height: 60px;
+          color: #a77400;
+          display: block;
+          text-shadow: 0px 3px 2px #00000078;
+        }
+      }
+
+      details {
+        position: absolute;
+        left: 13vh;
+        
+        h4 {
+          @include transition(all 0.2s ease);
+          // display: none;
+
+          small {
+            // display: none;
+          }
+        }
+
+        p {
+          @include transition(all 0.2s ease);
+          // display: none;
+
+          small {
+            // display: none;
+          }
+
+          summary {
+            // display: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+app-movies {
+  .author {
+    width: 100vw;
+    height: 30vh;
+    position: absolute;
+    z-index: 3;
+
+    p {
+      height: 50%;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      a {
+        @include transition(all 0.2s ease);
+        font-family: "Meddon", cursive;
+        font-size: 16px;
+        line-height: 30px;
+        color: #ff03038c;
+        text-decoration: none;
+
+        &:hover {
+          font-size: 15px;
+          line-height: 30px;
+          color: #4b00ffa6;
+        }
+      }
+
+      span {
+        font-family: "Lexend Tera", sans-serif;
+        text-transform: uppercase;
+        font-size: 10px;
+        display: block;
+        color: #2f00ab63;
+      }
+    }
+
+    h1 {
+      @extend .blinking-title;
+    }
+  }
+
+  .content {
+    @extend .full-width;
+    margin: 0;
+    padding: 20vw;
+    position: absolute;
+    z-index: 2;
+
+    li {
+      display: none;
+
+      &:nth-child(3) {
+        display: block;
+      }
+
+      /* movie.scss */
+    }
+  }
+
+  .dust {
+    @extend .full-width;
+    display: block;
+    opacity: 0.5;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    canvas {
+      width: 100vw;
+      min-height: 100vh;
+      display: block;
+    }
+  }
+
+  .background-movie-info {
+    width: 100%;
+    max-width: 40vw;
+    height: 100%;
+    background-image: url("assets/img/background-movie-info.svg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: left center;
+    background-size: contain;
+    transform: rotate(-90deg);
+    display: block;
+    opacity: 0.2;
+    position: absolute;
+    z-index: 0;
+    left: 30vw;
+  }
+}
