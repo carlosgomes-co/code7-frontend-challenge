@@ -25,6 +25,9 @@
       "@movies/*": [
         "src/app/movies/*"
       ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ],
       "@data/*": [
         "src/data/*"
       ],

@@ -29,7 +29,7 @@
 
   &:before {
     content: "10 Top Rated Movies";
-    font-family: "CoreCircus2DDot1";
+    font-family: $font_title_secondary;
     color: var(--text-inner-color);
     text-shadow: none;
     transform: translate(1.5px, 0.5px);
@@ -38,16 +38,17 @@
 }
 
 .blinking-title {
+  @extend .vars;
   @extend .text-shadow-3d;
   @extend .text-inner-dots;
   @include transition(all 0.2s ease);
 
   width: 100vw;
   margin: 0;
-  font-family: "CoreCircus", sans-serif;
-  font-size: var(--text-size);
-  font-weight: normal;
-  color: var(--text-color);
+  font-family: $font_title;
+  font-size: var(--fs-1);
+  font-weight: var(--fw-regular);
+  color: var(--page-title-color);
   cursor: pointer;
   line-height: 1;
   text-align: center;

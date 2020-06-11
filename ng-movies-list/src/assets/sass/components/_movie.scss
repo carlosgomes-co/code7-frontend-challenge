@@ -1,98 +1,154 @@
 app-movie {
-  @extend .full-width;
+  width: 100%;
+  display: flex;
 
   article {
-    // margin: 0 5vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: wrap;
+    padding-top: var(--mc-padding-vertical);
+    padding-bottom: var(--mc-padding-vertical);
+    padding-left: var(--mc-padding-horizontal);
+    padding-right: var(--mc-padding-horizontal);
 
-    > div {
-      position: absolute;
-      z-index: 4;
-
-      picture {
-        img {
-          @include border-radius(3px);
-          width: 15vw;
-          margin-top: 2vh;
-          margin-left: 20vw;
-          box-shadow: 0px 30px 30px #0000007d;
-        }
+    .img {
+      width: 40%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      margin-left: 5%;
+      // margin: 5vh 0vw 5vh 5vw;
+      // box-shadow: -3px 3px 0px #00000036;
+    }
+    picture {
+      img {
+        @include border-radius(3px);
+        width: 20vw;
+        margin: 5vh 0vw 5vh 5vw;
+        box-shadow: -3px 3px 0px var(--content-shadow-2);
       }
-      h2 {
-        width: 17vw;
-        margin-top: 4vh;
-        margin-left: 1vw;
-        font-family: "Oswald", sans-serif;
-        font-size: 20px;
-        font-weight: 400;
-        color: #efca0c;
-        text-transform: uppercase;
-        float: right;
-        text-shadow: 0px 20px 20px #000000c7;
+    }
 
-        small {
-          font-size: 14px;
-          font-weight: 600;
-          color: #19005d;
+    .rating {
+      margin-left: 5%;
+      margin-right: 5%;
+      padding: 3px 2px 2px 2px;
+      background-color: var(--content-accent);
+      font-family: $font_secondary;
+      font-size: var(--fs-6);
+      font-weight: var(--fw-extrabold);
+      color: var(--content-accent-text);
+      text-orientation: upright;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      border-radius: 10vw;
+      box-shadow: 2px 2px 1px var(--content-shadow-2);
+      text-shadow: 0px 0px 2px var(--content-accent-text);
+
+      span {
+        margin-top: 5px;
+        font-family: $font_secondary;
+        font-size: calc(var(--fs-6) * 1.4);
+        font-weight: var(--fw-medium);
+        writing-mode: rl-tb;
+
+        span:nth-child(1) {
+          vertical-align: top;
+          line-height: var(--fs-6);
+        }
+        span:nth-child(2) {
+          font-size: var(--fs-6);
+          line-height: calc(var(--fs-6) * 1.8);
+          vertical-align: top;
+          margin-right: 1px;
+        }
+        span:nth-child(3) {
+          font-size: calc(var(--fs-6) * 0.8);
+          vertical-align: baseline;
         }
       }
     }
 
-    aside {
-      position: absolute;
-      z-index: 4;
-      cursor: default;
+    .info {
+      width: 35%;
+      text-align: center;
 
-      h3 {
-        width: 170px;
-        margin: 0px 22px;
-        font-family: "Oswald", sans-serif;
-        font-size: 80px;
-        line-height: 45px;
-        color: #efb240;
-        text-align: center;
+      .year {
+        margin-bottom: calc(var(--fs-4) * 0.5);
+        font-family: $font_secondary;
+        font-size: var(--fs-4);
+        font-weight: var(--fw-black);
+        color: var(--content-black);
+        display: block;
+        text-shadow: 2px 2px 1px var(--content-shadow-1);
+      }
+
+      .title {
+        font-family: $font_secondary;
+        font-size: var(--fs-2);
+        line-height: calc(var(--fs-2) * 1.2);
+        font-weight: var(--fw-black);
+        color: var(--content-red);
         text-transform: uppercase;
-        position: absolute;
-        top: 8vh;
-        border: 1px solid #9100ff85;
-        border-radius: 100px;
-        height: 170px;
-        text-shadow: -5px 8px 1px #00000033, -5px 20px 25px #8008ffd6;
-        box-shadow: 0 0 15px #ff8b00c7;
+        text-shadow: 2px 2px 1px var(--content-shadow-2);
+      }
+
+      .director {
+        @include transition(all 0.2s ease);
+        margin-top: calc(var(--fs-3) * 0.5);
+        font-family: $font_primary;
+        font-size: calc(var(--fs-3) * 0.75);
+        text-transform: uppercase;
 
         small {
-          font-family: "Lexend Tera", sans-serif;
-          font-size: 12px;
-          line-height: 60px;
-          color: #a77400;
+          text-shadow: 2px 2px 1px var(--content-shadow-1);
           display: block;
-          text-shadow: 0px 3px 2px #00000078;
+        }
+
+        div {
+          margin-top: calc(var(--fs-3) * 0.25);
+          font-weight: var(--fw-black);
+          line-height: calc(var(--fs-3) * 1.2);
+          color: var(--content-black);
+          text-shadow: 2px 2px 1px var(--content-shadow-1);
+
+          p {
+            display: inline-block;
+          }
+          p:first-letter {
+            font-size: calc(var(--fs-3) * 1.5);
+          }
         }
       }
 
-      details {
-        position: absolute;
-        left: 13vh;
-        
-        h4 {
-          @include transition(all 0.2s ease);
-          // display: none;
+      .description {
+        @include transition(all 0.2s ease);
+        font-family: $font_secondary;
+        font-size: var(--fs-5);
+        text-transform: uppercase;
+        color: var(--content-black);
+        font-weight: var(--fw-bold);
+        margin-top: var(--fs-4);
+        text-shadow: 2px 2px 1px var(--content-shadow-1);
 
-          small {
-            // display: none;
-          }
+        &:before,
+        &:after {
+          font-family: $font_primary;
+          font-size: calc(var(--fs-5) * 1.5);
+          line-height: 0;
+          display: contents;
         }
-
-        p {
-          @include transition(all 0.2s ease);
-          // display: none;
-
-          small {
-            // display: none;
-          }
-
-          summary {
-            // display: none;
-          }
+        &:before {
+          content: "\201C";
+          padding-right: 3px;
+          vertical-align: top;
+        }
+        &:after {
+          content: "\201D";
+          padding-left: 3px;
         }
       }
     }

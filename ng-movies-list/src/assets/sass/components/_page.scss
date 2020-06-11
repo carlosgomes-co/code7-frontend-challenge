@@ -1,45 +1,34 @@
-// font-family: 'Lexend Tera', sans-serif;
-// font-family: 'Meddon', cursive;
-// font-family: 'Oswald', sans-serif;
-
 html {
+  @extend .vars;
   @extend .margin-zero;
-
-  --text-size: 50px;
-  --text-color: #ca0707;
-  --text-inner-color: #ffb423;
-  --text-border-color: #fedb5b;
-  --text-border-shadow-color: #fe950e;
-  --text-shadow-distance-x: 10px;
-  --text-shadow-distance-y: 50px;
-  --text-shadow-opacity: 15px;
-  --text-shadow-color: #0000008a;
-
-  .shining {
-    --text-size: 54px;
-    --text-color: #fd1c1c;
-    --text-inner-color: #ffffff;
-    --text-border-color: #f9df7f;
-    --text-border-shadow-color: #eb8703;
-    --text-shadow-distance-x: 8px;
-    --text-shadow-distance-y: 40px;
-    --text-shadow-opacity: 25px;
-    --text-shadow-color: #0000008a;
-  }
 
   body {
     @extend .margin-zero;
     @extend .full-width;
+    @include transition(all 0.3s ease-in);
     background-image: url("assets/img/background-body.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
-    background-color: #11023e;
+    background-color: #1b0301;
     background-blend-mode: screen;
     background-size: cover;
 
-    * { @include box-sizing(); }
+    &:hover {
+      background-color: #11023e;
+      background-blend-mode: screen;
+    }
 
-    main { section { &.top-rated-movies { @extend .full-width; } } }
+    * {
+      @include box-sizing();
+    }
+
+    main {
+      section {
+        &.top-rated-movies {
+          @extend .full-width;
+        }
+      }
+    }
   }
 }

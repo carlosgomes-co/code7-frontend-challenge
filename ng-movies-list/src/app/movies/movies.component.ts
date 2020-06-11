@@ -22,6 +22,9 @@ export class MoviesComponent implements OnInit, OnDestroy {
   /* Loading movies? */
   public loading = true;
 
+  /* Currrent index? */
+  public idx = 0;
+
   constructor(private storageService: StorageService) { }
 
   ngOnInit(): void {

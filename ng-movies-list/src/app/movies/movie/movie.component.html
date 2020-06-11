@@ -1,15 +1,16 @@
-<article>
-  <div>
-    <picture>
-      <img [src]="data?.poster" [title]="data?.name" [alt]="data?.name">
-    </picture>
-    <h2>{{data?.name}} <small>({{data?.year}})</small></h2>
+<article @fade>
+  <div class="img" [style.backgroundImage]="'url(' + data?.poster + ')'" [title]="data?.name">
   </div>
-  <aside>
-    <h3><small>Rating: </small>{{data?.rating}}</h3>
-    <details>
-      <h4><small>Director: </small>{{data?.director}}</h4>
-      <p><small>Description: </small><summary>{{data?.description}}</summary></p>
-    </details>
-  </aside>
+
+  <h3 class="rating">Rating<span><span *ngFor="let char of data?.rating">{{char}}</span></span></h3>
+
+  <div class="info">
+    <p class="year">{{data?.year}}</p>
+
+    <h2 class="title">{{data?.name}}</h2>
+
+    <h4 class="director"><small>By</small><div><p *ngFor="let word of data?.director">{{word}}&nbsp;</p></div></h4>
+
+    <summary class="description">{{data?.description}}</summary>
+  </div>
 </article>

@@ -1,12 +1,8 @@
 /* Resest Styles */
-:root {
-  font-size: 15px;
-}
-
 html, body {
-  min-width: 100%;
-  min-height: 100%;
-  margin: 0;
+  @extend .full-width;
+  @extend .margin-zero;
+
   padding: 0;
   display: inline-block;
 }
