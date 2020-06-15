@@ -5,7 +5,6 @@ import { MoviesComponent } from '@movies/movies.component';
 
 const routes: Routes = [
   { path: '', component: MoviesComponent }
-  // { path: ':id', loadChildren: '@establishments/details/details.module#DetailsModule' }
 ];
 
 @NgModule({
